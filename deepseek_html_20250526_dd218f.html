@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickRecipes - 3-Ingredient Meals</title>
+    <meta name="description" content="Delicious recipes with just 3 ingredients!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AdMob Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADMOB_PUBLISHER_ID" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-container">
+                <i class="fas fa-utensils logo-icon"></i>
+                <h1>Quick<span>Recipes</span></h1>
+            </div>
+            <p class="tagline">Gourmet meals with just 3 ingredients!</p>
+        </header>
+
+        <main class="main-content">
+            <div class="search-section">
+                <div class="input-group">
+                    <input type="text" id="ingredient1" placeholder="First ingredient" class="ingredient-input">
+                    <input type="text" id="ingredient2" placeholder="Second ingredient" class="ingredient-input">
+                    <input type="text" id="ingredient3" placeholder="Third ingredient" class="ingredient-input">
+                </div>
+                <button id="search-btn" class="search-button">
+                    <i class="fas fa-search"></i> Find Recipes
+                </button>
+                <button id="random-btn" class="random-button">
+                    <i class="fas fa-random"></i> Surprise Me!
+                </button>
+            </div>
+
+            <!-- AdMob Banner Ad -->
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_ADMOB_PUBLISHER_ID"
+                     data-ad-slot="YOUR_ADMOB_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <div class="results-section" id="results">
+                <div class="welcome-message">
+                    <div class="welcome-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h2>Welcome to QuickRecipes!</h2>
+                    <p>Enter 3 ingredients you have, and we'll show you delicious recipes you can make right now!</p>
+                    <p>Try: <span class="example-ingredients">chicken, broccoli, cheese</span> or <span class="example-ingredients">eggs, spinach, mushrooms</span></p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="footer-links">
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Contact</a>
+                <a href="#" class="footer-link">Premium</a>
+            </div>
+            <p class="copyright">© 2023 QuickRecipes - All rights reserved</p>
+        </footer>
+    </div>
+
+    <!-- Recipe Modal -->
+    <div class="modal" id="recipeModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalRecipeTitle"></h2>
+            <img id="modalRecipeImage" src="" alt="Recipe image" class="modal-image">
+            <div class="modal-details">
+                <p><i class="fas fa-clock"></i> <span id="modalRecipeTime"></span> mins</p>
+                <p><i class="fas fa-utensils"></i> <span id="modalRecipeServings"></span> servings</p>
+            </div>
+            <div class="modal-ingredients">
+                <h3>Ingredients</h3>
+                <ul id="modalRecipeIngredients"></ul>
+            </div>
+            <div class="modal-instructions">
+                <h3>Instructions</h3>
+                <ol id="modalRecipeInstructions"></ol>
+            </div>
+            <button class="save-recipe">Save Recipe</button>
+            
+            <!-- AdMob Interstitial Ad Trigger -->
+            <button class="premium-cta" onclick="showInterstitialAd()">
+                Go Premium (Ad-Free)
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Interstitial Ad function
+        function showInterstitialAd() {
+            // This would be replaced with actual AdMob interstitial code
+            alert("Premium feature! In the full app, this would show an interstitial ad.");
+        }
+    </script>
+</body>
+</html>
